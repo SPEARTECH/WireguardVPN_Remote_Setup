@@ -2,7 +2,7 @@
 WireguardVPN Remote Setup scripts, directions, and api on server + client.
 
 ###### enable in and out networking for 51820 wireguard port for all ips and protocols
-- Set up cloud vm wireguard server conf
+###### Set up cloud vm wireguard server conf
 - $sudo apt upgrade
 - $sudo apt install wireguard
 ###### Start interface on boot
