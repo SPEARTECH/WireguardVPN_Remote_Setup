@@ -11,4 +11,8 @@ WireguardVPN Remote Setup scripts, directions, and api on server + client.
 - $sudo systemctl start wg-quick@wg0
 ###### Check wg0
 - $sudo systemctl status wg-quick@wg0
-###### Enable wg0 on server
+###### Start wireguard api on server
+- python -m pip install requirements.txt
+- python ./wg_server.py
+###### Enable wireguard api on server
+
