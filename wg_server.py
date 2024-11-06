@@ -7,6 +7,8 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://127.0.0.1:8001"}})
 
+SERVER_PUB_KEY = 'sL2AIYdeWr1FlRfW0bbU2D16d4q93/9FGPqDY4PcIV0='
+
 ## if client doesnt not have wg0.conf
 #get list of wireguard clients
 
@@ -116,7 +118,7 @@ def create_wireguard_client():
             'status': 'success',
             "client_ip": next_ip,
             "private_key": new_client_priv_key,
-            "server_pub_key": 'sL2AIYdeWr1FlRfW0bbU2D16d4q93/9FGPqDY4PcIV0=', #return server pub key
+            "server_pub_key": SERVER_PUB_KEY, #return server pub key
         })
     except Exception as e:
         return jsonify({
